@@ -1,13 +1,16 @@
 const express = require('express')
 const app = express()
-
+const router = express.Router()
+const init = require("./src/init")
 const path = require('path')
 
 const PORT = 3000
 
-const router = express.Router()
-
 app.use(router)
+
+
+init(router)
+
 
 router.get("/", (req, res, next) => { 
   res.send("Hello World!")
