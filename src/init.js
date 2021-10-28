@@ -1,5 +1,7 @@
-const routes = require("./routes/clientes")
+const routesCliente = require("./routes/clientes")
+const routesMenu = require("./routes/menu")
 
 module.exports = router => {
-  routes.ClienteRoute(router)
+  routesCliente.ClienteRoute(router)
+  routesMenu.MenuRoute(router)
 }

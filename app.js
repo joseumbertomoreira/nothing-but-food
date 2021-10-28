@@ -4,17 +4,17 @@ const router = express.Router()
 const init = require("./src/init")
 const path = require('path')
 
+const public = path.resolve("./public")
+app.use(express.static(public))
+
 const PORT = 3000
+
+app.set('view engine', 'ejs')
+app.set("views", path.resolve("./src/views"))
 
 app.use(router)
 
-
 init(router)
-
-
-router.get("/", (req, res, next) => { 
-  res.send("Hello World!")
-})
 
 app.listen(PORT, err => {
   
