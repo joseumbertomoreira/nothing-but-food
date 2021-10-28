@@ -10,14 +10,65 @@
   <title>Hello, world!</title>
 </head>
 <body> 
-
   <div class="container">
+    <% for(let i = 1; i < clientes.length; i += 3) { %>
     <div class="row justify-content-center">
-      <div class="col-6 border rounded cartao-conteudo">
-        <h1>Hello, worldd!</h1>
+      <div class="col-3 m-1 border rounded cartao-conteudo">
+        <% if(clientes[i] !== 0) { %> 
+        <div class="row">
+          <div class="col m-2 text-center">
+            <img class="img-thumbnail" src="https://studiosol-a.akamaihd.net/uploadfile/letras/fotos/2/c/1/9/2c192dc4d06895bda3f2190ff32a04ca.jpg" alt="Girl in a jacket" width="150" height="150">
+          </div>          
+        </div>
+        <div class="row">
+          <div class="col m-2">
+            <h3>Boteco do Saitama</h3>
+            <p>Bar <%=clientes[i].bairro %></p>
+            <div class="text-center">
+              <a class="btn btn-primary" href="#" role="button">Entrar</a>              
+            </div>            
+          </div>
+        </div>
+        <% } %>   
       </div>
-
+      <div class="col-3 m-1 border rounded cartao-conteudo">
+        <% if(clientes[i+1] !== 0) { %> 
+        <div class="row">
+          <div class="col m-2 text-center">
+            <img class="img-thumbnail" src="https://studiosol-a.akamaihd.net/uploadfile/letras/fotos/2/c/1/9/2c192dc4d06895bda3f2190ff32a04ca.jpg" alt="Girl in a jacket" width="150" height="150">
+          </div>          
+        </div>
+        <div class="row">
+          <div class="col m-2">
+            <h3>Boteco do Saitama</h3>
+            <p>Bar <%=clientes[i+1].bairro %></p>
+            <div class="text-center">
+              <a class="btn btn-primary" href="#" role="button">Entrar</a>              
+            </div>            
+          </div>
+        </div>
+        <% } %>
+      </div>
+      <div class="col-3 m-1 border rounded cartao-conteudo">
+        <% if(clientes[i+2] !== 0) { %> 
+        <div class="row">
+          <div class="col m-2 text-center">
+            <img class="img-thumbnail" src="https://studiosol-a.akamaihd.net/uploadfile/letras/fotos/2/c/1/9/2c192dc4d06895bda3f2190ff32a04ca.jpg" alt="Girl in a jacket" width="150" height="150">
+          </div>          
+        </div>
+        <div class="row">
+          <div class="col m-2">
+            <h3>Boteco do Saitama</h3>
+            <p>Bar <%=clientes[i+2].bairro %></p>
+            <div class="text-center">
+              <a class="btn btn-primary" href="#" role="button">Entrar</a>              
+            </div>            
+          </div>
+        </div>
+        <% } %>
+      </div>
     </div>    
+    <% } %> 
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
